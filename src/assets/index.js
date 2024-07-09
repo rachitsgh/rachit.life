@@ -34,8 +34,10 @@ import Connectly from "./Connectly.png"
 import Netflixgpt from "./NetflixGPT.png"
 import BiteSwift from "./BiteSwift.png"
 import CodeGenix from "./CodeGenix.png"
+import leetcode from "./leetcode.png"
 
 export {
+  leetcode,
   logo,
   backend,
   creator,
