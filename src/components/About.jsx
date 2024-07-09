@@ -26,7 +26,9 @@ const ServiceCard = ({ index, title, icon }) => {
 const About = () => {
   return (
     <>
-      <motion.div variants={textVariant()}>
+      <motion.div
+        id='about'
+      variants={textVariant()}>
         <p className={styles.sectionSubText}>
           Introduction
         </p>
@@ -34,8 +36,8 @@ const About = () => {
           Overview
         </h2>
       </motion.div>
-      <motion.p variants={fadeIn("", "", 0.1, 1)}
-        className='mt-4 text-secondary text-[17px] max-w-3xl leading-[30px]'>
+      <motion.p  variants={fadeIn("", "", 0.1, 1)}
+        className='mt-4 text-secondary text-[17px] max-w-3xl leading-[30px] about'>
         I'm Rachit, a final year student at Chitkara University with a passion for software development. I have strong skills in JavaScript, React, Node.js, Three.js, Redux Toolkit, Java, and Data Structures and Algorithms (DSA). I enjoy creating efficient, scalable, and user-friendly solutions to tackle real-world challenges. Let's collaborate to bring your ideas to life!
       </motion.p>
       <div className='mt-20 flex flex-wrap gap-10'>
