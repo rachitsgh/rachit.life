@@ -7,7 +7,7 @@ const Footer = () => {
   return (
     <footer className="bg-black text-white py-8">
       <div className="container mx-auto text-center">
-        <h1 className="text-2xl mb-6">Follow Us</h1>
+        <h1 className="text-2xl mb-6">Follow Me</h1>
         <div className="flex justify-center gap-8 space-x-6">
           <a href="https://www.snapchat.com/add/rachitsnp.10?share_id=2ywlOGDSJtc&locale=en-US" className="group">
             <i className="fab fa-snapchat text-3xl group-hover:text-yellow-200"></i>
