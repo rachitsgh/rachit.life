@@ -7,6 +7,10 @@ import {logo,menu,close} from '../assets'
 const Navbar = () => {
   const [active,setActive]=useState('');
   const [toggle,setToggle]=useState(false);
+
+  // const handleClick=(e,id)=>{
+  //   e.preventDefault()
+  // }
   return (
     <nav
     className={` ${styles.paddingX} w-full flex items-center py-5 fixed top-0 z-20 bg-primary`}>
@@ -22,23 +26,20 @@ const Navbar = () => {
           <img src={logo} alt='logo' className='w-14 h-14 object-contain'/>
           <p className='text-white text-[18px] font-bold cursor-pointer flex'>Rachit &nbsp; <span className='sm:block hidden'> Pathak</span></p>
         </Link>
-        <ul className='list-none hidden sm:flex
-        flex-row gap-10'>
-            {navLinks.map((Link)=>(
-              <li
-                key={Link.id}
-                className={`${
-                  active===Link.title?"text-white":"text-secondary"
-                } hover:text-white text-[18px] font-medium`}
-                onClick={(e)=>{
-                  e.preventDefault();
-                  setActive(Link.title);
-                }}
-              >
-                <a href={`${Link.id}`}>{Link.title}</a>
-              </li>
-            ))
-            }
+        <ul className='list-none hidden sm:flex flex-row gap-10'>
+          {navLinks.map((link) => (
+            <li
+              key={link.id}
+              className={`${active === link.id ? 'text-white' : 'text-secondary'} hover:text-white text-[18px] font-medium cursor-pointer`}
+              // // onClick={() => handleClick(link.id)}
+              // onClick={(e)=>{
+              //   e.preventDefault();
+              //   setActive(link.id);
+              // }}
+            >
+              <a href={`#${link.id}`}>{link.title}</a>
+            </li>
+          ))}
         </ul>
         <div className='sm:hidden flex flex-1 justify-end items-center'>
             <img
